@@ -37,6 +37,9 @@ public class OpenTransportClient {
         return gson.fromJson(runRequest(request).getBody(), LocationResult.class);
     }
 
+    /**
+     * Returns the next connections from a location to another.
+     */
     public void getConnections() {
 
     }

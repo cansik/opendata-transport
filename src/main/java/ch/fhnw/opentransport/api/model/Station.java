@@ -23,7 +23,7 @@ public class Station {
     private Coordinate coordinate;
     @SerializedName("distance")
     @Expose
-    private Object distance;
+    private Double distance;
 
     /**
      * @return The id
@@ -84,14 +84,14 @@ public class Station {
     /**
      * @return The distance
      */
-    public Object getDistance() {
+    public Double getDistance() {
         return distance;
     }
 
     /**
      * @param distance The distance
      */
-    public void setDistance(Object distance) {
+    public void setDistance(Double distance) {
         this.distance = distance;
     }
 
