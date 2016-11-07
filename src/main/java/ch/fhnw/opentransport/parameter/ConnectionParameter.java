@@ -1,7 +1,7 @@
-package ch.fhnw.opentransport.api;
+package ch.fhnw.opentransport.parameter;
 
-import ch.fhnw.opentransport.api.types.AccessibilityType;
-import ch.fhnw.opentransport.api.types.TransportationType;
+import ch.fhnw.opentransport.type.AccessibilityType;
+import ch.fhnw.opentransport.type.TransportationType;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -12,25 +12,25 @@ import java.util.List;
  * Created by cansik on 06.11.16.
  */
 public class ConnectionParameter {
-    String from;
-    String to;
+    private String from;
+    private String to;
 
-    List<String> via = new ArrayList<String>();
-    String date;
-    String time;
-    boolean isArrivalTime = false;
+    private List<String> via = new ArrayList<String>();
+    private String date;
+    private String time;
+    private boolean isArrivalTime = false;
 
-    List<TransportationType> transportations = new ArrayList<TransportationType>();
+    private List<TransportationType> transportations = new ArrayList<TransportationType>();
 
-    int limit = 4;
-    int page = 0;
+    private int limit = 4;
+    private int page = 0;
 
-    boolean direct = false;
-    boolean sleeper = false;
-    boolean couchette = false;
-    boolean bike = false;
+    private boolean direct = false;
+    private boolean sleeper = false;
+    private boolean couchette = false;
+    private boolean bike = false;
 
-    AccessibilityType accessability = AccessibilityType.INDEPENDENT_BOARDING;
+    private AccessibilityType accessability = AccessibilityType.INDEPENDENT_BOARDING;
 
     public ConnectionParameter(String from, String to) {
         this.from = from;

@@ -1,4 +1,4 @@
-package ch.fhnw.opentransport.api.util;
+package ch.fhnw.opentransport.util;
 
 /**
  * Created by cansik on 07.11.16.

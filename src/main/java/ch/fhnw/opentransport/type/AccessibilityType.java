@@ -1,4 +1,4 @@
-package ch.fhnw.opentransport.api.types;
+package ch.fhnw.opentransport.type;
 
 /**
  * Created by cansik on 06.11.16.

@@ -1,6 +1,6 @@
-import ch.fhnw.opentransport.api.ConnectionParameter;
-import ch.fhnw.opentransport.api.OpenTransportClient;
-import ch.fhnw.opentransport.api.model.ConnectionResult;
+import ch.fhnw.opentransport.OpenTransportClient;
+import ch.fhnw.opentransport.model.ConnectionResult;
+import ch.fhnw.opentransport.parameter.ConnectionParameter;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,7 +1,7 @@
-import ch.fhnw.opentransport.api.OpenTransportClient;
-import ch.fhnw.opentransport.api.model.LocationResult;
-import ch.fhnw.opentransport.api.types.LocationType;
-import ch.fhnw.opentransport.api.types.TransportationType;
+import ch.fhnw.opentransport.OpenTransportClient;
+import ch.fhnw.opentransport.model.LocationResult;
+import ch.fhnw.opentransport.type.LocationType;
+import ch.fhnw.opentransport.type.TransportationType;
 import org.junit.Before;
 import org.junit.Test;
 

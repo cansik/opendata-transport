@@ -33,6 +33,9 @@ LocationResult result = client.getLocations(x, y, TransportationType.ICE_TGV_RJ)
 ### Connections
 
 ```java
+String city1 = "Basel SBB";
+String city2 = "Zurich";
+
 ConnectionResult result = client.getConnections(city1, city2);
 ```
 
