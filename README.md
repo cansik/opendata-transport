@@ -1,4 +1,4 @@
-# Open Data Transport Framework [![Build Status](https://travis-ci.org/cansik/open-transport-fetcher.svg?branch=master)](https://travis-ci.org/cansik/open-transport-fetcher) [![codebeat badge](https://codebeat.co/badges/4995db42-2d83-4351-a53b-d1b0c5e23b39)](https://codebeat.co/projects/github-com-cansik-open-transport-fetcher)
+# Open Data Transport Framework [![Build Status](https://travis-ci.org/cansik/opendata-transport.svg?branch=master)](https://travis-ci.org/cansik/opendata-transport) [![codebeat badge](https://codebeat.co/badges/d0f75bc6-2fc5-49b4-9a6a-a6bce888b23e)](https://codebeat.co/projects/github-com-cansik-opendata-transport)
 The Transport API allows interested developers to build their own applications using public timetable data, whether they're on the web, the desktop or mobile devices. The aim of the API is to cover public transport within Switzerland.
 
 This is an implementation of the Open Data Transport API in Java.
