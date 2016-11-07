@@ -3,6 +3,7 @@ package ch.opendata.transport.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.sun.org.apache.xpath.internal.operations.String;
 
 import javax.annotation.Generated;
 
@@ -14,16 +15,16 @@ public class Stop {
     private Station station;
     @SerializedName("arrival")
     @Expose
-    private Object arrival;
+    private String arrival;
     @SerializedName("arrivalTimestamp")
     @Expose
-    private Object arrivalTimestamp;
+    private Long arrivalTimestamp;
     @SerializedName("departure")
     @Expose
     private String departure;
     @SerializedName("departureTimestamp")
     @Expose
-    private Integer departureTimestamp;
+    private Long departureTimestamp;
     @SerializedName("platform")
     @Expose
     private String platform;
@@ -48,28 +49,28 @@ public class Stop {
     /**
      * @return The arrival
      */
-    public Object getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
      * @param arrival The arrival
      */
-    public void setArrival(Object arrival) {
+    public void setArrival(String arrival) {
         this.arrival = arrival;
     }
 
     /**
      * @return The arrivalTimestamp
      */
-    public Object getArrivalTimestamp() {
+    public Long getArrivalTimestamp() {
         return arrivalTimestamp;
     }
 
     /**
      * @param arrivalTimestamp The arrivalTimestamp
      */
-    public void setArrivalTimestamp(Object arrivalTimestamp) {
+    public void setArrivalTimestamp(Long arrivalTimestamp) {
         this.arrivalTimestamp = arrivalTimestamp;
     }
 
@@ -90,14 +91,14 @@ public class Stop {
     /**
      * @return The departureTimestamp
      */
-    public Integer getDepartureTimestamp() {
+    public Long getDepartureTimestamp() {
         return departureTimestamp;
     }
 
     /**
      * @param departureTimestamp The departureTimestamp
      */
-    public void setDepartureTimestamp(Integer departureTimestamp) {
+    public void setDepartureTimestamp(Long departureTimestamp) {
         this.departureTimestamp = departureTimestamp;
     }
 

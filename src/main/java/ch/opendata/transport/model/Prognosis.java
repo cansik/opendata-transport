@@ -11,13 +11,13 @@ public class Prognosis {
 
     @SerializedName("platform")
     @Expose
-    private Object platform;
+    private Integer platform;
     @SerializedName("arrival")
     @Expose
-    private Object arrival;
+    private String arrival;
     @SerializedName("departure")
     @Expose
-    private Object departure;
+    private String departure;
     @SerializedName("capacity1st")
     @Expose
     private String capacity1st;
@@ -28,42 +28,42 @@ public class Prognosis {
     /**
      * @return The platform
      */
-    public Object getPlatform() {
+    public Integer getPlatform() {
         return platform;
     }
 
     /**
      * @param platform The platform
      */
-    public void setPlatform(Object platform) {
+    public void setPlatform(Integer platform) {
         this.platform = platform;
     }
 
     /**
      * @return The arrival
      */
-    public Object getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
      * @param arrival The arrival
      */
-    public void setArrival(Object arrival) {
+    public void setArrival(String arrival) {
         this.arrival = arrival;
     }
 
     /**
      * @return The departure
      */
-    public Object getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
      * @param departure The departure
      */
-    public void setDeparture(Object departure) {
+    public void setDeparture(String departure) {
         this.departure = departure;
     }
 

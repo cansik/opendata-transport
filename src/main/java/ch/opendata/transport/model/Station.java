@@ -17,7 +17,7 @@ public class Station {
     private String name;
     @SerializedName("score")
     @Expose
-    private Object score;
+    private Integer score;
     @SerializedName("coordinate")
     @Expose
     private Coordinate coordinate;
@@ -56,14 +56,14 @@ public class Station {
     /**
      * @return The score
      */
-    public Object getScore() {
+    public Integer getScore() {
         return score;
     }
 
     /**
      * @param score The score
      */
-    public void setScore(Object score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 

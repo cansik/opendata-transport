@@ -11,10 +11,10 @@ public class Checkpoint {
 
     @SerializedName("arrival")
     @Expose
-    private Object arrival;
+    private String arrival;
     @SerializedName("arrivalTimestamp")
     @Expose
-    private Object arrivalTimestamp;
+    private Long arrivalTimestamp;
     @SerializedName("departure")
     @Expose
     private String departure;
@@ -34,28 +34,28 @@ public class Checkpoint {
     /**
      * @return The arrival
      */
-    public Object getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
      * @param arrival The arrival
      */
-    public void setArrival(Object arrival) {
+    public void setArrival(String arrival) {
         this.arrival = arrival;
     }
 
     /**
      * @return The arrivalTimestamp
      */
-    public Object getArrivalTimestamp() {
+    public Long getArrivalTimestamp() {
         return arrivalTimestamp;
     }
 
     /**
      * @param arrivalTimestamp The arrivalTimestamp
      */
-    public void setArrivalTimestamp(Object arrivalTimestamp) {
+    public void setArrivalTimestamp(Long arrivalTimestamp) {
         this.arrivalTimestamp = arrivalTimestamp;
     }
 
