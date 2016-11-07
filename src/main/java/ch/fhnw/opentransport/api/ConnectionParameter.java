@@ -3,6 +3,9 @@ package ch.fhnw.opentransport.api;
 import ch.fhnw.opentransport.api.types.AccessibilityType;
 import ch.fhnw.opentransport.api.types.TransportationType;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -12,26 +15,31 @@ public class ConnectionParameter {
     String from;
     String to;
 
-    List<String> via;
+    List<String> via = new ArrayList<String>();
     String date;
     String time;
     boolean isArrivalTime = false;
 
-    TransportationType transportations;
+    List<TransportationType> transportations = new ArrayList<TransportationType>();
 
-    int limit;
-    int page;
+    int limit = 4;
+    int page = 0;
 
-    boolean direct;
-    boolean sleeper;
-    boolean couchette;
-    boolean bike;
+    boolean direct = false;
+    boolean sleeper = false;
+    boolean couchette = false;
+    boolean bike = false;
 
     AccessibilityType accessability = AccessibilityType.INDEPENDENT_BOARDING;
 
     public ConnectionParameter(String from, String to) {
         this.from = from;
         this.to = to;
+    }
+
+    public void setDateTime(Date date) {
+        setDate(new SimpleDateFormat("yyyy-MM-dd").format(date));
+        setTime(new SimpleDateFormat("HH:mm").format(date));
     }
 
     public String getFrom() {
@@ -52,10 +60,6 @@ public class ConnectionParameter {
 
     public List<String> getVia() {
         return via;
-    }
-
-    public void setVia(List<String> via) {
-        this.via = via;
     }
 
     public String getDate() {
@@ -82,12 +86,8 @@ public class ConnectionParameter {
         isArrivalTime = arrivalTime;
     }
 
-    public TransportationType getTransportations() {
+    public List<TransportationType> getTransportations() {
         return transportations;
-    }
-
-    public void setTransportations(TransportationType transportations) {
-        this.transportations = transportations;
     }
 
     public int getLimit() {

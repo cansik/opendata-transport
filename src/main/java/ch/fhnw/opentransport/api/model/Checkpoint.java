@@ -20,7 +20,7 @@ public class Checkpoint {
     private String departure;
     @SerializedName("departureTimestamp")
     @Expose
-    private Integer departureTimestamp;
+    private Long departureTimestamp;
     @SerializedName("platform")
     @Expose
     private String platform;
@@ -76,14 +76,14 @@ public class Checkpoint {
     /**
      * @return The departureTimestamp
      */
-    public Integer getDepartureTimestamp() {
+    public Long getDepartureTimestamp() {
         return departureTimestamp;
     }
 
     /**
      * @param departureTimestamp The departureTimestamp
      */
-    public void setDepartureTimestamp(Integer departureTimestamp) {
+    public void setDepartureTimestamp(Long departureTimestamp) {
         this.departureTimestamp = departureTimestamp;
     }
 

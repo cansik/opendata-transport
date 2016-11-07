@@ -4,6 +4,7 @@ import ch.fhnw.opentransport.api.model.ConnectionResult;
 import ch.fhnw.opentransport.api.model.LocationResult;
 import ch.fhnw.opentransport.api.types.LocationType;
 import ch.fhnw.opentransport.api.types.TransportationType;
+import ch.fhnw.opentransport.api.util.BooleanUtils;
 import com.google.gson.Gson;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
@@ -41,16 +42,37 @@ public class OpenTransportClient {
     /**
      * Returns the next connections from a location to another.
      */
+    public ConnectionResult getConnections(String from, String to) {
+        return getConnections(new ConnectionParameter(from, to));
+    }
+
+    /**
+     * Returns the next connections from a location to another.
+     */
     public ConnectionResult getConnections(ConnectionParameter params) {
         HttpRequest request = Unirest.get(baseUrl.concat("connections"))
                 .queryString("from", params.getFrom())
                 .queryString("to", params.getTo());
 
-        return gson.fromJson(runRequest(request).getBody(), ConnectionResult.class);
-    }
+        for (String via : params.getVia()) {
+            request.queryString("via[]", via);
+        }
 
-    public ConnectionResult getConnections(String from, String to) {
-        return getConnections(new ConnectionParameter(from, to));
+        if (params.getDate() != null) request.queryString("date", params.getDate());
+        if (params.getTime() != null) request.queryString("time", params.getTime());
+
+        for (TransportationType t : params.getTransportations()) {
+            request.queryString("transportations[]", t);
+        }
+
+        request.queryString("direct", BooleanUtils.toNumeralString(params.isDirect()));
+        request.queryString("sleeper", BooleanUtils.toNumeralString(params.isSleeper()));
+        request.queryString("couchette", BooleanUtils.toNumeralString(params.isCouchette()));
+        request.queryString("bike", BooleanUtils.toNumeralString(params.isBike()));
+
+        request.queryString("accessability", params.getAccessability());
+
+        return gson.fromJson(runRequest(request).getBody(), ConnectionResult.class);
     }
 
     public void getStationboard() {
