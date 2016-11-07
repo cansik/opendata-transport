@@ -1,7 +1,7 @@
-import ch.fhnw.opentransport.OpenTransportClient;
-import ch.fhnw.opentransport.model.LocationResult;
-import ch.fhnw.opentransport.type.LocationType;
-import ch.fhnw.opentransport.type.TransportationType;
+import ch.opendata.transport.TransportClient;
+import ch.opendata.transport.model.LocationResult;
+import ch.opendata.transport.type.LocationType;
+import ch.opendata.transport.type.TransportationType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,11 +11,11 @@ import static org.junit.Assert.assertEquals;
  * Created by cansik on 06.11.16.
  */
 public class LocationTest {
-    private OpenTransportClient client;
+    private TransportClient client;
 
     @Before
     public void initObjects() {
-        client = new OpenTransportClient();
+        client = new TransportClient();
     }
 
     @Test

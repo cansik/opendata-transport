@@ -1,5 +1,5 @@
 
-package ch.fhnw.opentransport.model;
+package ch.opendata.transport.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

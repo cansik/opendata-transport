@@ -1,5 +1,5 @@
 
-package ch.fhnw.opentransport.model;
+package ch.opendata.transport.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -7,11 +7,8 @@ import com.google.gson.annotations.SerializedName;
 import javax.annotation.Generated;
 
 @Generated("org.jsonschema2pojo")
-public class Stop {
+public class Checkpoint {
 
-    @SerializedName("station")
-    @Expose
-    private Station station;
     @SerializedName("arrival")
     @Expose
     private Object arrival;
@@ -23,27 +20,16 @@ public class Stop {
     private String departure;
     @SerializedName("departureTimestamp")
     @Expose
-    private Integer departureTimestamp;
+    private Long departureTimestamp;
     @SerializedName("platform")
     @Expose
     private String platform;
     @SerializedName("prognosis")
     @Expose
     private Prognosis prognosis;
-
-    /**
-     * @return The station
-     */
-    public Station getStation() {
-        return station;
-    }
-
-    /**
-     * @param station The station
-     */
-    public void setStation(Station station) {
-        this.station = station;
-    }
+    @SerializedName("station")
+    @Expose
+    private Station station;
 
     /**
      * @return The arrival
@@ -90,14 +76,14 @@ public class Stop {
     /**
      * @return The departureTimestamp
      */
-    public Integer getDepartureTimestamp() {
+    public Long getDepartureTimestamp() {
         return departureTimestamp;
     }
 
     /**
      * @param departureTimestamp The departureTimestamp
      */
-    public void setDepartureTimestamp(Integer departureTimestamp) {
+    public void setDepartureTimestamp(Long departureTimestamp) {
         this.departureTimestamp = departureTimestamp;
     }
 
@@ -127,6 +113,20 @@ public class Stop {
      */
     public void setPrognosis(Prognosis prognosis) {
         this.prognosis = prognosis;
+    }
+
+    /**
+     * @return The station
+     */
+    public Station getStation() {
+        return station;
+    }
+
+    /**
+     * @param station The station
+     */
+    public void setStation(Station station) {
+        this.station = station;
     }
 
 }

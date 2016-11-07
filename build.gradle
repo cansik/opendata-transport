@@ -1,9 +1,18 @@
-group 'ch.fhnw.opentransport'
+group 'ch.opendata.transport'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
 sourceCompatibility = 1.5
+
+version = '1.0'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Opendata Transport',
+                'Implementation-Version': version
+    }
+}
 
 repositories {
     mavenCentral()

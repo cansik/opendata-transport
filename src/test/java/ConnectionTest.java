@@ -1,6 +1,6 @@
-import ch.fhnw.opentransport.OpenTransportClient;
-import ch.fhnw.opentransport.model.ConnectionResult;
-import ch.fhnw.opentransport.parameter.ConnectionParameter;
+import ch.opendata.transport.TransportClient;
+import ch.opendata.transport.model.ConnectionResult;
+import ch.opendata.transport.parameter.ConnectionParameter;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,14 +12,14 @@ import static org.junit.Assert.assertEquals;
  * Created by cansik on 07.11.16.
  */
 public class ConnectionTest {
-    private OpenTransportClient client;
+    private TransportClient client;
     private String city1;
     private String city2;
     private Date connectionDate;
 
     @Before
     public void initObjects() {
-        client = new OpenTransportClient();
+        client = new TransportClient();
 
         city1 = "Basel SBB";
         city2 = "Zurich";

@@ -1,4 +1,4 @@
-package ch.fhnw.opentransport.type;
+package ch.opendata.transport.type;
 
 /**
  * Created by cansik on 07.11.16.

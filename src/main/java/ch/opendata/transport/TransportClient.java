@@ -1,13 +1,13 @@
-package ch.fhnw.opentransport;
+package ch.opendata.transport;
 
-import ch.fhnw.opentransport.model.ConnectionResult;
-import ch.fhnw.opentransport.model.LocationResult;
-import ch.fhnw.opentransport.model.StationboardResult;
-import ch.fhnw.opentransport.parameter.ConnectionParameter;
-import ch.fhnw.opentransport.parameter.StationboardParameter;
-import ch.fhnw.opentransport.type.LocationType;
-import ch.fhnw.opentransport.type.TransportationType;
-import ch.fhnw.opentransport.util.BooleanUtils;
+import ch.opendata.transport.model.ConnectionResult;
+import ch.opendata.transport.model.LocationResult;
+import ch.opendata.transport.model.StationboardResult;
+import ch.opendata.transport.parameter.ConnectionParameter;
+import ch.opendata.transport.parameter.StationboardParameter;
+import ch.opendata.transport.type.LocationType;
+import ch.opendata.transport.type.TransportationType;
+import ch.opendata.transport.util.BooleanUtils;
 import com.google.gson.Gson;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
@@ -17,7 +17,7 @@ import com.mashape.unirest.request.HttpRequest;
 /**
  * Handles the connection the open data transport api.
  */
-public class OpenTransportClient {
+public class TransportClient {
     private final String baseUrl = "http://transport.opendata.ch/v1/";
 
     private final Gson gson = new Gson();

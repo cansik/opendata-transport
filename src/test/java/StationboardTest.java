@@ -1,5 +1,5 @@
-import ch.fhnw.opentransport.OpenTransportClient;
-import ch.fhnw.opentransport.model.StationboardResult;
+import ch.opendata.transport.TransportClient;
+import ch.opendata.transport.model.StationboardResult;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,13 +9,13 @@ import static org.junit.Assert.assertEquals;
  * Created by cansik on 07.11.16.
  */
 public class StationboardTest {
-    private OpenTransportClient client;
+    private TransportClient client;
     private String station;
     private String id;
 
     @Before
     public void initObjects() {
-        client = new OpenTransportClient();
+        client = new TransportClient();
 
         station = "Aarau";
         id = "008502113";

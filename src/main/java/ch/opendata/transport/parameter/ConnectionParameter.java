@@ -1,7 +1,7 @@
-package ch.fhnw.opentransport.parameter;
+package ch.opendata.transport.parameter;
 
-import ch.fhnw.opentransport.type.AccessibilityType;
-import ch.fhnw.opentransport.type.TransportationType;
+import ch.opendata.transport.type.AccessibilityType;
+import ch.opendata.transport.type.TransportationType;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
