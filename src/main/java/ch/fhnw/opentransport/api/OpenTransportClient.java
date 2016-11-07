@@ -1,5 +1,6 @@
 package ch.fhnw.opentransport.api;
 
+import ch.fhnw.opentransport.api.model.ConnectionResult;
 import ch.fhnw.opentransport.api.model.LocationResult;
 import ch.fhnw.opentransport.api.types.LocationType;
 import ch.fhnw.opentransport.api.types.TransportationType;
@@ -40,8 +41,16 @@ public class OpenTransportClient {
     /**
      * Returns the next connections from a location to another.
      */
-    public void getConnections() {
+    public ConnectionResult getConnections(ConnectionParameter params) {
+        HttpRequest request = Unirest.get(baseUrl.concat("connections"))
+                .queryString("from", params.getFrom())
+                .queryString("to", params.getTo());
 
+        return gson.fromJson(runRequest(request).getBody(), ConnectionResult.class);
+    }
+
+    public ConnectionResult getConnections(String from, String to) {
+        return getConnections(new ConnectionParameter(from, to));
     }
 
     public void getStationboard() {

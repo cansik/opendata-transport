@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by cansik on 06.11.16.
  */
-public class ApiTest {
+public class LocationTest {
     private OpenTransportClient client;
 
     @Before
