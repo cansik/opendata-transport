@@ -11,7 +11,7 @@ public class Prognosis {
 
     @SerializedName("platform")
     @Expose
-    private Integer platform;
+    private String platform;
     @SerializedName("arrival")
     @Expose
     private String arrival;
@@ -28,14 +28,14 @@ public class Prognosis {
     /**
      * @return The platform
      */
-    public Integer getPlatform() {
+    public String getPlatform() {
         return platform;
     }
 
     /**
      * @param platform The platform
      */
-    public void setPlatform(Integer platform) {
+    public void setPlatform(String platform) {
         this.platform = platform;
     }
 

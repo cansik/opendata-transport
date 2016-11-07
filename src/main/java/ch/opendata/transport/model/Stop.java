@@ -3,9 +3,9 @@ package ch.opendata.transport.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.sun.org.apache.xpath.internal.operations.String;
 
 import javax.annotation.Generated;
+import java.util.Date;
 
 @Generated("org.jsonschema2pojo")
 public class Stop {
@@ -15,13 +15,13 @@ public class Stop {
     private Station station;
     @SerializedName("arrival")
     @Expose
-    private String arrival;
+    private Date arrival;
     @SerializedName("arrivalTimestamp")
     @Expose
     private Long arrivalTimestamp;
     @SerializedName("departure")
     @Expose
-    private String departure;
+    private Date departure;
     @SerializedName("departureTimestamp")
     @Expose
     private Long departureTimestamp;
@@ -49,14 +49,14 @@ public class Stop {
     /**
      * @return The arrival
      */
-    public String getArrival() {
+    public Date getArrival() {
         return arrival;
     }
 
     /**
      * @param arrival The arrival
      */
-    public void setArrival(String arrival) {
+    public void setArrival(Date arrival) {
         this.arrival = arrival;
     }
 
@@ -77,14 +77,14 @@ public class Stop {
     /**
      * @return The departure
      */
-    public String getDeparture() {
+    public Date getDeparture() {
         return departure;
     }
 
     /**
      * @param departure The departure
      */
-    public void setDeparture(String departure) {
+    public void setDeparture(Date departure) {
         this.departure = departure;
     }
 

@@ -1,5 +1,6 @@
 import ch.opendata.transport.TransportClient;
 import ch.opendata.transport.model.StationboardResult;
+import ch.opendata.transport.parameter.StationboardParameter;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -29,5 +30,18 @@ public class StationboardTest {
         assertEquals("Stationboards not the same!",
                 result1.getStationboard().size(),
                 result2.getStationboard().size());
+    }
+
+    @Test
+    public void testEnhancedStationboard() {
+        StationboardParameter param = new StationboardParameter();
+        param.setStation(station);
+        param.setLimit(0);
+
+        StationboardResult result = client.getStationboard(param);
+
+        assertEquals("Stationboards is not empty!",
+                0,
+                result.getStationboard().size());
     }
 }

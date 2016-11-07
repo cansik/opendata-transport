@@ -9,6 +9,7 @@ import ch.opendata.transport.type.LocationType;
 import ch.opendata.transport.type.TransportationType;
 import ch.opendata.transport.util.BooleanUtils;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
@@ -20,7 +21,11 @@ import com.mashape.unirest.request.HttpRequest;
 public class TransportClient {
     private final String baseUrl = "http://transport.opendata.ch/v1/";
 
-    private final Gson gson = new Gson();
+    private final Gson gson;
+
+    public TransportClient() {
+        gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
+    }
 
     /**
      * Returns the matching locations for the given parameters.
@@ -142,6 +147,7 @@ public class TransportClient {
 
         if (params.getDateTime() != null) request.queryString("datetime", params.getDateTime());
         request.queryString("type", params.getDateTimeType());
+        request.queryString("limit", params.getLimit());
 
         return gson.fromJson(runRequest(request).getBody(), StationboardResult.class);
     }

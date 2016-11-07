@@ -8,7 +8,7 @@ For more information go to the official documentation:
 [Open Data Transport API](https://transport.opendata.ch/docs.html)
 
 ## Examples
-### Create a new open data client
+### Create a new transport client
 ```java
 OpenTransportClient client = new OpenTransportClient();
 ```
@@ -53,6 +53,16 @@ params.setDateTime(connectionDate);
 ConnectionResult result = client.getConnections(params);
 ```
 
+### Stationboard
+
+```java
+StationboardParameter param = new StationboardParameter();
+param.setStation(station);
+param.setLimit(0);
+
+StationboardResult result = client.getStationboard(param);
+```
+
 ## About
 This framework has been developed by Florian to be used in a school project.
 
@@ -60,5 +70,3 @@ Frameworks:
 
 * [gson](https://github.com/google/gson) by Google
 * [unirest](http://unirest.io/java) by Mashape
-
-
