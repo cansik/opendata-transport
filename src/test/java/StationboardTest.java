@@ -4,6 +4,7 @@ import ch.opendata.transport.parameter.StationboardParameter;
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -36,12 +37,11 @@ public class StationboardTest {
     public void testEnhancedStationboard() {
         StationboardParameter param = new StationboardParameter();
         param.setStation(station);
-        param.setLimit(0);
+        param.setLimit(1);
 
         StationboardResult result = client.getStationboard(param);
-
-        assertEquals("Stationboards is not empty!",
-                0,
-                result.getStationboard().size());
+        
+        assertTrue("Stationboards is not empty!",
+                1 <= result.getStationboard().size());
     }
 }
