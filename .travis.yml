@@ -10,6 +10,7 @@ install:
 
 # command to run tests
 script:
-  - "gradle check -i"
+  - "gradle build --stacktrace"
+  - "gradle check --stacktrace"
 
 after_success:
