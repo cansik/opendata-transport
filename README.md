@@ -14,7 +14,7 @@ OpenTransportClient client = new OpenTransportClient();
 ```
 **Hint:** *The number of HTTP requests you can send to transport.opendata.ch is limited to 3 requests per second per IP address.*
 
-### Locations by query
+### Locations by query
 
 ```java
 String city = "Basel";
@@ -30,7 +30,7 @@ double y = 7.5897;
 LocationResult result = client.getLocations(x, y, TransportationType.ICE_TGV_RJ);
 ```
 
-### Connections
+### Connections
 
 ```java
 String city1 = "Basel SBB";
@@ -39,7 +39,7 @@ String city2 = "Zurich";
 ConnectionResult result = client.getConnections(city1, city2);
 ```
 
-###  Connections enhanced
+### Connections enhanced
 
 ```java
 String city1 = "Basel SBB";
@@ -64,7 +64,7 @@ StationboardResult result = client.getStationboard(param);
 ```
 
 ## About
-This framework has been developed by Florian to be used in a school project.
+This framework has been developed by [cansik](https://github.com/cansik) for educational purpose.
 
 Frameworks:
 
